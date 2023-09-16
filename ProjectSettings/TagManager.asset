@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Music1
   - InteractableObject
+  - NPC
   layers:
   - Default
   - TransparentFX
