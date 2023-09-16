@@ -11,6 +11,10 @@ public class InteractableObject : MonoBehaviour
 
     public GameObject[] objectsToStop;
 
+    public AudioSource musicStop;
+    public AudioSource crowdStop;
+
+    private bool musicPlaying = true;
 
     private bool isPlaying = true;
 
@@ -25,9 +29,10 @@ public class InteractableObject : MonoBehaviour
         if (characterRB != null)
         {
             //characterRB.constraints = RigidbodyConstraints.FreezePosition;
-            
-            
         }
+
+        PauseAudio();
+
         isPlaying = false;
 
         if (isPlaying)
@@ -57,6 +62,27 @@ public class InteractableObject : MonoBehaviour
         playerStare.Stare();
 
 
+
+    }
+
+    public void PauseAudio()
+    {
+            musicPlaying = false;
+
+            musicStop.Pause();
+
+            crowdStop.Pause();
+
+    }
+
+    public void ResumeAudio()
+    {
+        
+        musicPlaying = false;
+
+            musicStop.UnPause();
+
+            crowdStop.UnPause();
 
     }
 }
