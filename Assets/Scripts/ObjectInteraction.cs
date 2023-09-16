@@ -11,6 +11,10 @@ public class ObjectInteraction : MonoBehaviour
     
     public float interactionDistance = 2f; 
 
+    public Transform player;
+    public Transform npcLook;
+
+
 
     void Start()
     {
@@ -41,6 +45,10 @@ public class ObjectInteraction : MonoBehaviour
                 if (interactableObject != null)
                 {
                     interactableObject.Interact();
+
+                    npcLook.transform.LookAt(player);
+
+
                 }
             }
         }

@@ -16,7 +16,7 @@ public class InteractableObject : MonoBehaviour
 
     void Start()
     {
-        playerStare = GameObject.FindObjectOfType(typeof(StareAtPlayer)) as StareAtPlayer;
+        //playerStare = GameObject.FindObjectOfType(typeof(StareAtPlayer)) as StareAtPlayer;
     }
 
     
@@ -41,7 +41,7 @@ public class InteractableObject : MonoBehaviour
         }
         else
         {
-foreach (GameObject obj in objectsToStop)
+            foreach (GameObject obj in objectsToStop)
         {
             Animator animator = obj.GetComponent<Animator>();
             if (animator != null)
