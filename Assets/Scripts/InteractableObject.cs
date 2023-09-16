@@ -16,6 +16,15 @@ public class InteractableObject : MonoBehaviour
 
     public GameObject brightLight;
     public GameObject brightLight2;
+    public GameObject playerSpotlight;
+    public GameObject vLight;
+
+    public GameObject redLight;
+    public GameObject blueLight;
+    public GameObject purpLight;
+    public GameObject greenLight;
+
+
 
     private bool musicPlaying = true;
 
@@ -26,6 +35,8 @@ public class InteractableObject : MonoBehaviour
         //playerStare = GameObject.FindObjectOfType(typeof(StareAtPlayer)) as StareAtPlayer;
         brightLight.SetActive(false);
         brightLight2.SetActive(false);
+        playerSpotlight.SetActive(false);
+        vLight.SetActive(false);
     }
 
     
@@ -39,6 +50,14 @@ public class InteractableObject : MonoBehaviour
         PauseAudio();
         brightLight.SetActive(true);
         brightLight2.SetActive(true);
+        playerSpotlight.SetActive(true);
+        vLight.SetActive(true);
+
+
+        redLight.SetActive(false);
+        blueLight.SetActive(false);
+        purpLight.SetActive(false);
+        greenLight.SetActive(false);
 
         isPlaying = false;
 
