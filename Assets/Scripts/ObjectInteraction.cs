@@ -16,15 +16,16 @@ public class ObjectInteraction : MonoBehaviour
 
 
 
-    void Start()
-    {
+     void Start()
+        {
         talkActive = false;
+        
 
-    }
+        }
 
     void Update()
     {
-
+        
         if (talkActive == false)
         {
             talkText.SetActive(false);
@@ -47,17 +48,34 @@ public class ObjectInteraction : MonoBehaviour
                 {
                     interactableObject.Interact();
 
-                    foreach (GameObject item in npcLook)
-                    {
-                        Vector3 direction = player.position - item.transform.position;
+                    // foreach (GameObject item in npcLook)
+                    // {
+                    //     Vector3 direction = player.position - item.transform.position;
 
-                    // Rotate the item to look at the target
-                    item.transform.LookAt(player);  
-                    }
+                    // item.transform.LookAt(player);  
+                    // }
+
+                    StartCoroutine(Looking());
 
                 }
             }
         }
+
+            IEnumerator Looking()
+    {
+                while(true)
+                {
+                    foreach (GameObject item in npcLook)
+                    {
+                        Vector3 direction = player.position - item.transform.position;
+
+                    item.transform.LookAt(player);  
+                    }
+
+                    yield return null;
+                }
+    }
+
 
         if (talkActive == false)
         {

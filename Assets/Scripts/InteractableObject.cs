@@ -25,6 +25,8 @@ public class InteractableObject : MonoBehaviour
         if (characterRB != null)
         {
             //characterRB.constraints = RigidbodyConstraints.FreezePosition;
+            
+            
         }
         isPlaying = false;
 
@@ -51,7 +53,7 @@ public class InteractableObject : MonoBehaviour
         }
         }
 
-
+        
         playerStare.Stare();
 
 
