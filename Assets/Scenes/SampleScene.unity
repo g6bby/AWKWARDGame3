@@ -8199,7 +8199,34 @@ MonoBehaviour:
   talkText: {fileID: 2136688926}
   interactionDistance: 2
   player: {fileID: 1847952707}
-  npcLook: {fileID: 950493319}
+  npcLook:
+  - {fileID: 950493318}
+  - {fileID: 1024017452}
+  - {fileID: 740095625}
+  - {fileID: 10642095}
+  - {fileID: 612441868}
+  - {fileID: 1373117333}
+  - {fileID: 832808500}
+  - {fileID: 213194317}
+  - {fileID: 339489296}
+  - {fileID: 350128309}
+  - {fileID: 1555833573}
+  - {fileID: 1794007021}
+  - {fileID: 187791972}
+  - {fileID: 1332800332}
+  - {fileID: 646057169}
+  - {fileID: 212705893}
+  - {fileID: 984601931}
+  - {fileID: 999964709}
+  - {fileID: 18182667}
+  - {fileID: 466992191}
+  - {fileID: 717581867}
+  - {fileID: 1355636491}
+  - {fileID: 1009045449}
+  - {fileID: 345290410}
+  - {fileID: 817453408}
+  - {fileID: 1435968068}
+  - {fileID: 796975874}
 --- !u!1 &1099997127
 GameObject:
   m_ObjectHideFlags: 0

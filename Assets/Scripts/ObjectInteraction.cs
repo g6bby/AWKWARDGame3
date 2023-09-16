@@ -12,13 +12,14 @@ public class ObjectInteraction : MonoBehaviour
     public float interactionDistance = 2f; 
 
     public Transform player;
-    public Transform npcLook;
+    public GameObject[] npcLook;
 
 
 
     void Start()
     {
         talkActive = false;
+
     }
 
     void Update()
@@ -46,8 +47,13 @@ public class ObjectInteraction : MonoBehaviour
                 {
                     interactableObject.Interact();
 
-                    npcLook.transform.LookAt(player);
+                    foreach (GameObject item in npcLook)
+                    {
+                        Vector3 direction = player.position - item.transform.position;
 
+                    // Rotate the item to look at the target
+                    item.transform.LookAt(player);  
+                    }
 
                 }
             }
