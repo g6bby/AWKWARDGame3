@@ -24,7 +24,9 @@ public class InteractableObject : MonoBehaviour
     public GameObject purpLight;
     public GameObject greenLight;
 
+    private ObjectInteraction objectInteraction;
 
+    private RigidbodyConstraints originalConstraints;
 
     private bool musicPlaying = true;
 
@@ -37,6 +39,9 @@ public class InteractableObject : MonoBehaviour
         brightLight2.SetActive(false);
         playerSpotlight.SetActive(false);
         vLight.SetActive(false);
+
+        originalConstraints = characterRB.constraints;
+
     }
 
     
@@ -44,7 +49,7 @@ public class InteractableObject : MonoBehaviour
    {
         if (characterRB != null)
         {
-            //characterRB.constraints = RigidbodyConstraints.FreezePosition;
+            characterRB.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
         }
 
         PauseAudio();
@@ -85,9 +90,10 @@ public class InteractableObject : MonoBehaviour
         }
 
         
+
         playerStare.Stare();
 
-
+        StartCoroutine(WaitTime());
 
     }
 
@@ -111,4 +117,37 @@ public class InteractableObject : MonoBehaviour
             crowdStop.UnPause();
 
     }
+
+    IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(4f);
+
+        brightLight.SetActive(false);
+        brightLight2.SetActive(false);
+        playerSpotlight.SetActive(false);
+        vLight.SetActive(false);
+
+        redLight.SetActive(true);
+        blueLight.SetActive(true);
+        purpLight.SetActive(true);
+        greenLight.SetActive(true);
+
+        ResumeAudio();
+
+        foreach (GameObject obj in objectsToStop)
+        {
+            Animator animator = obj.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.enabled = true;
+            }
+        }
+
+        characterRB.constraints = originalConstraints;
+
+        //StartCoroutine(objectInteraction.StopLooking());
+
+    }
+
+    
 }

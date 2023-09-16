@@ -14,12 +14,20 @@ public class ObjectInteraction : MonoBehaviour
     public Transform player;
     public GameObject[] npcLook;
 
+    private Quaternion[] originalRotations;
 
 
      void Start()
         {
-        talkActive = false;
-        
+            talkActive = false;
+            
+            originalRotations = new Quaternion[npcLook.Length];
+
+        // Store the original rotations of npcLook objects
+        for (int i = 0; i < npcLook.Length; i++)
+        {
+            originalRotations[i] = npcLook[i].transform.rotation;
+        }
 
         }
 
@@ -62,19 +70,26 @@ public class ObjectInteraction : MonoBehaviour
         }
 
             IEnumerator Looking()
-    {
-                while(true)
+        {
+                Quaternion[] currentRotations = new Quaternion[npcLook.Length];
+
+                for (int i = 0; i < npcLook.Length; i++)
                 {
-                    foreach (GameObject item in npcLook)
-                    {
-                        Vector3 direction = player.position - item.transform.position;
+                    Vector3 direction = player.position - npcLook[i].transform.position;
 
-                    item.transform.LookAt(player);  
-                    }
+                    npcLook[i].transform.LookAt(player);
 
-                    yield return null;
+                    currentRotations[i] = npcLook[i].transform.rotation;
                 }
-    }
+
+                yield return new WaitForSeconds(3f);
+
+                for (int i = 0; i < npcLook.Length; i++)
+                {
+                    npcLook[i].transform.rotation = currentRotations[i];
+                }
+        }
+
 
 
         if (talkActive == false)
@@ -93,4 +108,5 @@ public class ObjectInteraction : MonoBehaviour
             }
         }
     }
+
 }
