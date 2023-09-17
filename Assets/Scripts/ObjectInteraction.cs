@@ -12,6 +12,8 @@ public class ObjectInteraction : MonoBehaviour
 
     private Quaternion[] originalRotations;
 
+    public GameObject firstDialogue;
+
     void Start()
     {
         talkActive = false;
@@ -36,6 +38,8 @@ public class ObjectInteraction : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            talkText.SetActive(false);
+
             Ray ray = new Ray(transform.position, transform.forward);
             RaycastHit hit;
 
@@ -50,6 +54,8 @@ public class ObjectInteraction : MonoBehaviour
                     StartCoroutine(Looking());
                 }
             }
+
+
         }
 
         IEnumerator Looking()
@@ -86,6 +92,12 @@ public class ObjectInteraction : MonoBehaviour
                 {
                     talkText.SetActive(true);
                 }
+
+                if (firstDialogue.activeSelf)
+                {
+                    talkText.SetActive(false);
+                }
+                
             }
         }
     }

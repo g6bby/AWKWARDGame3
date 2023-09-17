@@ -28,6 +28,10 @@ public class InteractableObject : MonoBehaviour
 
     private RigidbodyConstraints originalConstraints;
 
+    public GameObject dialogue1;
+
+
+
     private bool musicPlaying = true;
 
     private bool isPlaying = true;
@@ -39,6 +43,9 @@ public class InteractableObject : MonoBehaviour
         brightLight2.SetActive(false);
         playerSpotlight.SetActive(false);
         vLight.SetActive(false);
+
+        dialogue1.SetActive(false);
+
 
         originalConstraints = characterRB.constraints;
 
@@ -89,7 +96,11 @@ public class InteractableObject : MonoBehaviour
         }
         }
 
-        
+        //DIALOGUE
+        dialogue1.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
 
         playerStare.Stare();
 
@@ -143,8 +154,11 @@ public class InteractableObject : MonoBehaviour
             }
         }
 
+        dialogue1.SetActive(false);
         characterRB.constraints = originalConstraints;
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         //StartCoroutine(objectInteraction.StopLooking());
 
     }
