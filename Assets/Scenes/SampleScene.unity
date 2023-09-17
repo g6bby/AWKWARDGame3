@@ -2734,7 +2734,7 @@ Transform:
   m_GameObject: {fileID: 305104602}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -7.698, y: 6.751, z: 1.71}
+  m_LocalPosition: {x: -7.698, y: 6.751, z: 1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16835,8 +16835,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   adSource: {fileID: 1849169214}
   adClips:
-  - {fileID: 8300000, guid: e297ae171fc502e44a043df9a12df034, type: 3}
+  - {fileID: 8300000, guid: 8df236f1adad26a42a04e83d49eb2119, type: 3}
+  - {fileID: 8300000, guid: 8c8bedb7ab975824eab1056672384eb4, type: 3}
   - {fileID: 8300000, guid: b756909c96ba4d14cbc493340744c920, type: 3}
+  - {fileID: 8300000, guid: d3da89c5540558c4db23b49961701c40, type: 3}
+  - {fileID: 8300000, guid: e297ae171fc502e44a043df9a12df034, type: 3}
+  - {fileID: 8300000, guid: dc6e0446b869ea34084af0e0c1f3c640, type: 3}
+  - {fileID: 8300000, guid: 7c3ae8f714237034a870cb3eb24119fe, type: 3}
 --- !u!1 &1861375130 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5073252787961007812, guid: 93f9be97394799e44898968d1874ed94, type: 3}
@@ -18893,18 +18898,18 @@ AudioReverbZone:
   m_Enabled: 1
   m_MinDistance: 24
   m_MaxDistance: 37
-  m_ReverbPreset: 19
+  m_ReverbPreset: 22
   m_Room: -1000
   m_RoomHF: -1000
-  m_DecayTime: 1.49
-  m_DecayHFRatio: 0.83
-  m_Reflections: -10000
-  m_ReflectionsDelay: 0.061
-  m_Reverb: 500
-  m_ReverbDelay: 0.025
+  m_DecayTime: 2.81
+  m_DecayHFRatio: 0.14
+  m_Reflections: 429
+  m_ReflectionsDelay: 0.014
+  m_Reverb: 1023
+  m_ReverbDelay: 0.021
   m_HFReference: 5000
-  m_Diffusion: 100
-  m_Density: 100
+  m_Diffusion: 80
+  m_Density: 60
   m_LFReference: 250
   m_RoomLF: 0
 --- !u!4 &2141679461
