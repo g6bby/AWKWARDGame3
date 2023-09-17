@@ -13,6 +13,8 @@ public class ObjectInteraction : MonoBehaviour
     private Quaternion[] originalRotations;
 
     public GameObject firstDialogue;
+    public GameObject opt1;
+    public GameObject opt2;
 
     void Start()
     {
@@ -71,7 +73,7 @@ public class ObjectInteraction : MonoBehaviour
                 currentRotations[i] = npcLook[i].transform.rotation;
             }
 
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(10f);
 
             for (int i = 0; i < npcLook.Length; i++)
             {
@@ -97,8 +99,21 @@ public class ObjectInteraction : MonoBehaviour
                 {
                     talkText.SetActive(false);
                 }
+
+                if (opt1.activeSelf)
+                {
+                    talkText.SetActive(false);
+                }
+
+                if (opt2.activeSelf)
+                {
+                    talkText.SetActive(false);
+                }
+
                 
             }
         }
     }
+
+
 }

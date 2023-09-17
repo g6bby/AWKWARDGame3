@@ -29,6 +29,9 @@ public class InteractableObject : MonoBehaviour
     private RigidbodyConstraints originalConstraints;
 
     public GameObject dialogue1;
+    public GameObject dialogue1Answer;
+    public GameObject dialogue2Answer;
+
 
 
 
@@ -45,6 +48,7 @@ public class InteractableObject : MonoBehaviour
         vLight.SetActive(false);
 
         dialogue1.SetActive(false);
+        dialogue1Answer.SetActive(false);
 
 
         originalConstraints = characterRB.constraints;
@@ -131,7 +135,7 @@ public class InteractableObject : MonoBehaviour
 
     IEnumerator WaitTime()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(10f);
 
         brightLight.SetActive(false);
         brightLight2.SetActive(false);
@@ -155,6 +159,9 @@ public class InteractableObject : MonoBehaviour
         }
 
         dialogue1.SetActive(false);
+        dialogue1Answer.SetActive(false);
+        dialogue2Answer.SetActive(false);
+
         characterRB.constraints = originalConstraints;
 
         Cursor.lockState = CursorLockMode.Locked;
