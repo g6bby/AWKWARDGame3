@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -849,8 +849,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "   Did you know that the original name for Pac-Man was Puck-Man? You\u2019d
-    think..."
+  m_text: '   Did you know that the original name for Pac-Man was Puck-Man? They
+    changed it because...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0955a0c6a36420741b7295e25a0f4502, type: 2}
   m_sharedMaterial: {fileID: 852722072460025409, guid: 0955a0c6a36420741b7295e25a0f4502, type: 2}
@@ -7139,6 +7139,8 @@ MonoBehaviour:
   dialogue1: {fileID: 1896254886}
   dialogue1Answer: {fileID: 525829987}
   dialogue2Answer: {fileID: 1676443847}
+  targetCamera: {fileID: 1941931685}
+  newFOV: 80
 --- !u!65 &854817799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7381,6 +7383,8 @@ MonoBehaviour:
   dialogue1: {fileID: 1896254886}
   dialogue1Answer: {fileID: 525829987}
   dialogue2Answer: {fileID: 1676443847}
+  targetCamera: {fileID: 1941931685}
+  newFOV: 80
 --- !u!65 &859171386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8905,6 +8909,8 @@ MonoBehaviour:
   dialogue1: {fileID: 1896254886}
   dialogue1Answer: {fileID: 525829987}
   dialogue2Answer: {fileID: 1676443847}
+  targetCamera: {fileID: 1941931685}
+  newFOV: 80
 --- !u!65 &1010584870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9882,6 +9888,8 @@ MonoBehaviour:
   dialogue1: {fileID: 1896254886}
   dialogue1Answer: {fileID: 525829987}
   dialogue2Answer: {fileID: 1676443847}
+  targetCamera: {fileID: 1941931685}
+  newFOV: 80
 --- !u!65 &1099997129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10124,6 +10132,8 @@ MonoBehaviour:
   dialogue1: {fileID: 1896254886}
   dialogue1Answer: {fileID: 525829987}
   dialogue2Answer: {fileID: 1676443847}
+  targetCamera: {fileID: 1941931685}
+  newFOV: 80
 --- !u!65 &1137000415
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10376,9 +10386,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Now you sound like you\u2019re on some wild stuff man, and I personally
-    ain\u2019t into that shit, respect and all. Goddamn, can someone pass me another
-    fucking brewski beer?\r\n"
+  m_text: 'Yeah... that''s... totally amazing dude... so cool... hahhaah...... what
+    the fuck is a puck-man.....
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0955a0c6a36420741b7295e25a0f4502, type: 2}
   m_sharedMaterial: {fileID: 852722072460025409, guid: 0955a0c6a36420741b7295e25a0f4502, type: 2}
@@ -11384,6 +11395,8 @@ MonoBehaviour:
   dialogue1: {fileID: 1896254886}
   dialogue1Answer: {fileID: 525829987}
   dialogue2Answer: {fileID: 1676443847}
+  targetCamera: {fileID: 1941931685}
+  newFOV: 80
 --- !u!65 &1270489869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11633,9 +11646,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Listen, if you\u2019re looking for some more dangerous type shit man,
-    I\u2019ll hook you up if you can have a normal conversation with a single person.
-    Not like you\u2019re the type."
+  m_text: This is like THE Mojo Dojo Casa House. If you don't know who owns it...
+    well I can't help you. Look around, buddy.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0955a0c6a36420741b7295e25a0f4502, type: 2}
   m_sharedMaterial: {fileID: 852722072460025409, guid: 0955a0c6a36420741b7295e25a0f4502, type: 2}
@@ -13233,6 +13245,8 @@ MonoBehaviour:
   dialogue1: {fileID: 1896254886}
   dialogue1Answer: {fileID: 525829987}
   dialogue2Answer: {fileID: 1676443847}
+  targetCamera: {fileID: 1941931685}
+  newFOV: 80
 --- !u!65 &1490573338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14302,6 +14316,8 @@ MonoBehaviour:
   dialogue1: {fileID: 1896254886}
   dialogue1Answer: {fileID: 525829987}
   dialogue2Answer: {fileID: 1676443847}
+  targetCamera: {fileID: 1941931685}
+  newFOV: 80
 --- !u!65 &1591853597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14995,8 +15011,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "What the fuck do you want? Brewski beers are on the bar bro, you some
-    kinda straight-edger?\r"
+  m_text: What the fuck do you want? Brewski beers are on the bar bro, everyone is
+    staring at you.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0955a0c6a36420741b7295e25a0f4502, type: 2}
   m_sharedMaterial: {fileID: 852722072460025409, guid: 0955a0c6a36420741b7295e25a0f4502, type: 2}
@@ -16150,6 +16166,8 @@ MonoBehaviour:
   dialogue1: {fileID: 1896254886}
   dialogue1Answer: {fileID: 525829987}
   dialogue2Answer: {fileID: 1676443847}
+  targetCamera: {fileID: 1941931685}
+  newFOV: 80
 --- !u!65 &1774441128
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17520,6 +17538,11 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!20 &1941931685 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4459864851310106426, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 39542927}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1944428774
 PrefabInstance:
   m_ObjectHideFlags: 0

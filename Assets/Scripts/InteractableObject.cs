@@ -32,6 +32,8 @@ public class InteractableObject : MonoBehaviour
     public GameObject dialogue1Answer;
     public GameObject dialogue2Answer;
 
+    public Camera targetCamera;
+    public float newFOV = 135f;
 
 
 
@@ -74,6 +76,8 @@ public class InteractableObject : MonoBehaviour
         blueLight.SetActive(false);
         purpLight.SetActive(false);
         greenLight.SetActive(false);
+
+        targetCamera.fieldOfView = newFOV;
 
         isPlaying = false;
 
@@ -146,6 +150,8 @@ public class InteractableObject : MonoBehaviour
         blueLight.SetActive(true);
         purpLight.SetActive(true);
         greenLight.SetActive(true);
+
+        targetCamera.fieldOfView = 60f;
 
         ResumeAudio();
 
